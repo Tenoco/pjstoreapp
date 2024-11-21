@@ -1,0 +1,247 @@
+:root {
+  --background-color: #121212;
+  --text-color: #FFFFFF;
+  --card-background: #1E1E1E;
+  --input-background: #2C2C2E;
+  --button-color: #007AFF;
+  --button-text-color: #FFFFFF;
+  --border-radius: 12px;
+  --font-family: 'Courier New', monospace;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light {
+  --background-color: #FFFFFF;
+  --text-color: #000000;
+  --card-background: #F9F9F9;
+  --input-background: #E9E9EB;
+}
+
+header {
+  text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 20px;
+}
+
+.header-icon {
+    width: 40px; 
+    height: 40px; 
+    margin-right: 10px; 
+    border-radius: 8px; 
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0; 
+}
+
+.search-container {
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    font-family: var(--font-family);
+    font-size: 1em;
+    border-radius: var(--border-radius);
+    border: none; 
+    background-color: var(--input-background);
+    color: var(--text-color);
+}
+
+#app-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.app-button {
+   background-color: var(--button-color);
+   color: var(--button-text-color);
+   border: none;
+   padding: 15px 20px;
+   margin: 10px 0;
+   cursor: pointer;
+   font-family: var(--font-family);
+   font-size: 1em;
+   font-weight: 600;
+   border-radius: var(--border-radius); 
+   transition: background-color 0.2s ease, transform 0.2s ease;
+   text-decoration: none; 
+   display: inline-block; 
+}
+
+.app-button:hover {
+   background-color: #0056b3; 
+   transform: scale(1.05);
+}
+
+.app-card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+
+.mini-card {
+    display: flex;
+    align-items: center;
+}
+
+.icon-button {
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+}
+
+.icon-image {
+   width: 60px; 
+   height: 60px; 
+   border-radius: 8px; 
+   margin-right: 10px;
+}
+
+.icon-label {
+   color: var(--text-color);
+   font-family: var(--font-family);
+   font-size: 0.9em;
+   font-weight: bold;
+}
+
+.chat-container {
+     background-color: var(--card-background); 
+     border-radius: var(--border-radius); 
+     padding: 15px; 
+     margin-top: 20px;
+}
+
+img {
+      width: 45%; 
+      max-width: 300px; 
+      height: auto; 
+      border-radius: var(--border-radius); 
+      margin-top: 10px;
+}
+
+.screenshot-container {
+     display: flex; 
+     overflow-x: auto; 
+     padding-top: 10px; 
+     -webkit-overflow-scrolling: touch;
+}
+
+.screenshot-container img {
+      flex-shrink: 0; 
+      margin-right: 15px;
+}
+
+#theme-toggle-button {
+   background-color: var(--button-color);
+   color: var(--button-text-color);
+   border: none;
+   padding: 0.5em 1em; 
+   cursor: pointer;
+   font-family: var(--font-family);
+   font-size: 0.9em; 
+   border-radius: 0.75em; 
+   transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#theme-toggle-button:hover {
+   background-color: #0056b3; 
+   transform: scale(1.05);
+}
+
+.rating-section {
+    background-color: var(--card-background);
+    padding: 15px; 
+    border-radius: 0.75em; 
+    margin-top: 20px;
+}
+
+.rating-section h2 {
+     font-size: 1.2em;
+}
+
+#overall-rating {
+     font-size: 1.1em; 
+     margin-bottom: 0.5em;
+}
+
+#user-ratings {
+     list-style-type: none;
+     padding: 0;
+}
+
+#user-ratings li {
+     background-color: #333333; 
+     padding: 0.75em; 
+     border-radius: 0.75em; 
+     margin-bottom: 0.5em;
+}
+
+.user-name {
+      display: block;  
+      font-weight: bold;
+}
+
+.user-comment {
+      display: block;
+      margin: 0.5em 0;
+}
+
+.user-score {
+      float: right;
+}
+
+.tags-section {
+    margin-top: 20px;
+}
+
+#app-tags {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#app-tags li {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.leave-review-section {
+    margin-top: 20px;
+}

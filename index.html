@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>PJStore</title>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-store"></i> PJStore</h1>
+        <div class="toggle-container">
+            <button id="theme-toggle-button"><i class="fas fa-moon"></i> Switch to Light Mode</button>
+        </div>
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="search" placeholder="Search apps...">
+        </div>
+    </header>
+    <main id="app-list">
+        <!-- BON -->
+        <div class="app-card" data-tags="crypto,finance">
+            <div class="mini-card">
+                <button class="icon-button" onclick="location.href='bon.html'">
+                    <img src="bonicon.png" alt="BON Icon" class="icon-image">
+                </button>
+                <span class="icon-label">BON</span>
+            </div>
+        </div>
+        <!-- Editor's Choice -->
+        <h3><i class="fas fa-star"></i> Editor's Choice</h3>
+        <div class="app-card" data-tags="crypto,finance">
+            <div class="mini-card">
+                <button class="icon-button" onclick="location.href='bon.html'">
+                    <img src="bonicon.png" alt="BON Icon" class="icon-image">
+                </button>
+                <span class="icon-label">BON</span>
+            </div>
+        </div>
+        <!-- Add more app cards here as needed -->
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

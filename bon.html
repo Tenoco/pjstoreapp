@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <title>BON</title>
+</head>
+<body>
+   <header>
+       <div class="header-container">
+           <img src="bonicon.png" alt="BON Icon" class="header-icon">
+           <h1>BON</h1>
+       </div>
+       
+       <div class="chat-container">
+           <p><i class="fas fa-info-circle"></i> Description: BON Wallet - A TENOCO IceBerk wallet software for seamless cryptocurrency management!</p> 
+           <button class="app-button" onclick="window.location.href='bon.ver.1.0.apk'"><i class="fas fa-download"></i> Download App</button>
+       </div>
+
+       <div class="screenshot-container">
+           <img src="bon1.jpeg" alt="BON Screenshot 1">
+           <img src="bon2.jpeg" alt="BON Screenshot 2">
+           <img src="bon3.jpeg" alt="BON Screenshot 3">
+       </div>
+
+       <!-- Rating Section -->
+       <div class="rating-section">
+           <h2><i class="fas fa-star"></i> User Ratings</h2>
+           <div id="overall-rating"></div>
+           <ul id="user-ratings">
+               <li data-rating="8">
+                   <span class="user-name"><i class="fas fa-user"></i> John Doe</span>
+                   <span class="user-comment">Great wallet app, very useful!</span>
+                   <span class="user-score">8/10</span>
+               </li>
+               <li data-rating="10">
+                   <span class="user-name"><i class="fas fa-user"></i> Jane Smith</span>
+                   <span class="user-comment">Amazing cryptocurrency management!</span>
+                   <span class="user-score">10/10</span>
+               </li>
+               <li data-rating="6">
+                   <span class="user-name"><i class="fas fa-user"></i> Alex Brown</span>
+                   <span class="user-comment">Good, but needs some improvements.</span>
+                   <span class="user-score">6/10</span>
+               </li>
+           </ul>
+       </div>
+
+       <!-- Tags Section -->
+       <div class="tags-section">
+           <h2><i class="fas fa-tags"></i> Tags</h2>
+           <ul id="app-tags">
+               <li>Wallet</li>
+               <li>Crypto</li>
+               <li>Finance</li>
+               <li>TENOCO</li>
+           </ul>
+       </div>
+
+       <!-- Leave a Review Section -->
+       <div class="leave-review-section">
+           <a href="#review-form" class="app-button"><i class="fas fa-pen"></i> Leave a Review Here</a>
+       </div>
+
+   </header>
+
+   <!-- Placeholder for review form -->
+   <section id="review-form" style="display:none;">
+       <!-- Review form content goes here -->
+   </section>
+
+   <script src="script.js"></script>
+   <script>
+       document.addEventListener('DOMContentLoaded', function() {
+           const ratings = document.querySelectorAll('#user-ratings li');
+           let totalRating = 0;
+           ratings.forEach(rating => {
+               totalRating += parseInt(rating.getAttribute('data-rating'));
+           });
+           const overallRating = (totalRating / ratings.length).toFixed(1);
+           document.getElementById('overall-rating').innerHTML = `<i class="fas fa-star"></i> Overall Rating: ${overallRating}/10`;
+       });
+   </script>
+
+</body>
+</html>
